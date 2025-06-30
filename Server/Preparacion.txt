@@ -1,0 +1,20 @@
+npm install express bcrypt cors dotenv jsonwebtoken sequelize mysql2
+
+npm install typescript --save-dev
+
+npm install nodemon --save-dev
+
+npx tsc --init
+
+./tsconfig.json => Descomentar y agregar "outDir": "./dist"
+
+Creamos carpeta src
+src/index.ts: const nombre: string = 'index' , console.log(nombre)
+
+npx tsc
+
+nodemon dist/index.js
+
+npx tsc --watch
+
+
