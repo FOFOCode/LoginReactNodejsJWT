@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import "./Login.css";
 import { login } from "../services/authservice";
 import { loginAxios } from "../services/authServicesAxios";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [correo, setCorreo] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   // useEffect(() => {
   //   localStorage.removeItem("token");
@@ -32,6 +34,7 @@ export default function Login() {
       const data = await loginAxios(correo, password);
       alert("Login exitoso");
       console.log("Login exitoso");
+      navigate("/dashboard");
     } catch (error) {
       alert(error);
     }
